@@ -11,12 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="30dp"
         android:ems="10"
         android:hint="@string/txtPeso"
         android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/txtAltura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,59 +34,31 @@
         android:ems="10"
         android:hint="@string/txtAltura"
         android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPeso" />
-
-    <RadioButton
-        android:id="@+id/rdnMasc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="383dp"
-        android:text="@string/rdnMasc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rdnFemi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
-
-    <RadioButton
-        android:id="@+id/rdnFemi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginBottom="380dp"
-        android:checked="false"
-        android:text="@string/rdnFemi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rdnMasc"
-        app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="174dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="450dp"
         android:layout_marginEnd="179dp"
         android:layout_marginBottom="324dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="159dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="350dp"
         android:layout_marginEnd="164dp"
         android:layout_marginBottom="224dp"
         android:onClick="CalcularIMC"
@@ -93,18 +66,47 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
 
     <TextView
         android:id="@+id/txtNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="170dp"
-        android:layout_marginTop="91dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="177dp"
         android:layout_marginBottom="81dp"
         app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
+
+    <RadioGroup
+        android:layout_width="157dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="145dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAltura">
+
+        <RadioButton
+            android:id="@+id/rdnMasc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/rdnMasc" />
+
+        <RadioButton
+            android:id="@+id/rdnFemi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:minHeight="48dp"
+            android:text="@string/rdnFemi" />
+    </RadioGroup>
+
 </android.support.constraint.ConstraintLayout>

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             resultNum.setText(Double.valueOf(resultado).toString());
             if (sexoM.isChecked()) {
                 if(resultado < 20){
-                    result.setText("Abaixo do normal");
+                    result.setText("Abaixo do peso normal");
                 } else if(resultado >= 20 && resultado <= 24.9) {
                     result.setText("Normal");
                 } else if(resultado >= 25 && resultado <= 29.9){
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             } else if(sexoM.isChecked() == false && sexoF.isChecked() == true) {
                 if(resultado < 19){
-                    result.setText("Abaixo do Normal");
+                    result.setText("Abaixo do peso normal");
                 } else if(resultado >= 19 && resultado <= 23.9) {
                     result.setText("Normal");
                 } else if(resultado >= 24 && resultado <= 28.9){
