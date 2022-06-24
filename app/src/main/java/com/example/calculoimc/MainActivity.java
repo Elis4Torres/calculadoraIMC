@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
         EditText editPeso, editAltura;
-        TextView result, numero;
+        TextView result, resultNum;
         RadioButton sexoM, sexoF;
         double peso = 0.0;
         double altura = 0.0;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             editPeso = findViewById(R.id.txtPeso);
             editAltura = findViewById(R.id.txtAltura);
             result = findViewById(R.id.txtResultado);
-            numero = findViewById(R.id.txtNum);
+            resultNum = findViewById(R.id.txtNum);
             sexoM = findViewById(R.id.rdnMasc);
             sexoF = findViewById(R.id.rdnFemi);
         }
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             altura = Double.parseDouble(editAltura.getText().toString());
 
             double resultado = peso/(altura*altura);
-            result.setText(Double.valueOf(resultado).toString());
+            resultNum.setText(Double.valueOf(resultado).toString());
             if (sexoM.isChecked()) {
                 if(resultado < 20){
                     result.setText("Abaixo do normal");
